@@ -222,6 +222,56 @@ section.about p {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
+.skill-icon {
+  font-size: 2rem;
+  display: inline-block;
+  margin-bottom: 0.2rem;
+}
+
+.skill-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-left: 0.2rem;
+  vertical-align: middle;
+}
+
+.html5 {
+  color: #e34c26;
+}
+.css3 {
+  color: #2965f1;
+}
+.js {
+  color: #f7df1e;
+}
+.typescript {
+  color: #3178c6;
+}
+.react {
+  color: #61dafb;
+}
+.next {
+  color: #000;
+}
+.tailwind {
+  color: #38bdf8;
+}
+.node {
+  color: #68a063;
+}
+.mongo {
+  color: #47a248;
+}
+.postgres {
+  color: #336791;
+}
+.supabase {
+  color: #3ecf8e;
+}
+.prisma {
+  color: #000;
+}
+
 /* ===== PROJECTS ===== */
 .projects-grid {
   display: grid;
@@ -232,6 +282,9 @@ section.about p {
 .project-card {
   background: white;
   border-radius: var(--project-card-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
   padding: 1.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -246,7 +299,7 @@ section.about p {
   color: var(--primary);
   text-decoration: none;
   font-weight: 500;
-  margin-top: 0.5rem;
+  margin-top: auto;
 }
 
 /* ===== CONTACT ===== */

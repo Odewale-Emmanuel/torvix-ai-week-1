@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emmanuel Odewale | Frontend Engineer</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Line Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!-- ===== NAVBAR ===== -->
@@ -64,16 +78,49 @@
     <section id="skills" class="skills">
       <h2>Skills</h2>
       <div class="skills-grid">
-        <div class="skill-card">HTML5</div>
-        <div class="skill-card">CSS3</div>
-        <div class="skill-card">JavaScript (ES6+)</div>
-        <div class="skill-card">TypeScript</div>
-        <div class="skill-card">React.js / Next.js</div>
-        <div class="skill-card">Tailwind CSS / Shadcn</div>
-        <div class="skill-card">Node.js / Express.js</div>
-        <div class="skill-card">MongoDB / PostgreSQL</div>
-        <div class="skill-card">Supabase / Prisma</div>
-        <div class="skill-card">Git & GitHub</div>
+        <div class="skill-card" title="HTML5">
+          <i class="lab la-html5 skill-icon html5"></i>
+        </div>
+        <div class="skill-card" title="CSS3">
+          <i class="lab la-css3-alt skill-icon css3"></i>
+        </div>
+        <div class="skill-card" title="JavaScript">
+          <i class="lab la-js skill-icon js"></i>
+        </div>
+        <div class="skill-card" title="TypeScript">
+          <i class="lab la-react skill-icon typescript"></i
+          ><span class="skill-label typescript">TS</span>
+        </div>
+        <div class="skill-card" title="React.js">
+          <i class="lab la-react skill-icon react"></i>
+        </div>
+        <div class="skill-card" title="Next.js">
+          <i class="lab la-react skill-icon next"></i
+          ><span class="skill-label next">Next</span>
+        </div>
+        <div class="skill-card" title="Tailwind CSS">
+          <i class="las la-wind skill-icon tailwind"></i>
+        </div>
+        <div class="skill-card" title="Node.js">
+          <i class="lab la-node-js skill-icon node"></i>
+        </div>
+        <div class="skill-card" title="MongoDB">
+          <i class="lab la-envira skill-icon mongo"></i>
+        </div>
+        <div class="skill-card" title="PostgreSQL">
+          <i class="lab la-database skill-icon postgres"></i
+          ><span class="skill-label postgres">PG</span>
+        </div>
+        <div class="skill-card" title="Supabase">
+          <i class="las la-server skill-icon supabase"></i>
+        </div>
+        <div class="skill-card" title="Prisma">
+          <i class="las la-gem skill-icon prisma"></i
+          ><span class="skill-label prisma">Prisma</span>
+        </div>
+        <div class="skill-card" title="Git & GitHub">
+          <i class="lab la-github skill-icon github"></i>
+        </div>
       </div>
     </section>
 
@@ -81,19 +128,6 @@
     <section id="projects" class="projects">
       <h2>Projects</h2>
       <div class="projects-grid">
-        <div class="project-card">
-          <h3>StarkNotes</h3>
-          <p>
-            Fullstack note-taking app with authentication (JWT, cookies), built
-            using Next.js, Node.js, and MongoDB.
-          </p>
-          <a
-            rel="noopener noreferrer"
-            href="https://starknotes-nextjs.vercel.app"
-            target="_blank"
-            >Live Demo</a
-          >
-        </div>
         <div class="project-card">
           <h3>Mollateral</h3>
           <p>
@@ -107,9 +141,27 @@
             >View Project</a
           >
         </div>
+
+        <div class="project-card">
+          <h3>StarkNotes</h3>
+          <p>
+            Fullstack note-taking app with authentication (JWT, cookies), built
+            using Next.js, Node.js, and MongoDB.
+          </p>
+          <a
+            rel="noopener noreferrer"
+            href="https://starknotes-nextjs.vercel.app"
+            target="_blank"
+            >Live Demo</a
+          >
+        </div>
+
         <div class="project-card">
           <h3>Krea-ai</h3>
-          <p>A replica of Krea-Ai former landing page</p>
+          <p>
+            A replica of Krea-Ai former landing page with theme toggle
+            capability. A pre-internship task.
+          </p>
           <a
             rel="noopener noreferrer"
             href="https://krea-ai-rho.vercel.app/"
@@ -117,6 +169,35 @@
             >Live Demo</a
           >
         </div>
+
+        <div class="project-card">
+          <h3>Roomtrack</h3>
+          <p>
+            A simple web app to track and manage room design with user theme
+            preference in mind. A pre-internship task.
+          </p>
+          <a
+            rel="noopener noreferrer"
+            href="https://roomtrack.vercel.app/"
+            target="_blank"
+            >Live Demo</a
+          >
+        </div>
+
+        <div class="project-card">
+          <h3>Do-not-buy</h3>
+          <p>
+            A minimalist web app that helps users avoid impulsive purchases by
+            tracking items they intend not to buy.
+          </p>
+          <a
+            rel="noopener noreferrer"
+            href="https://do-not-buy.vercel.app/"
+            target="_blank"
+            >Live Demo</a
+          >
+        </div>
+
         <div class="project-card">
           <h3>Certiva</h3>
           <p>
@@ -218,22 +299,14 @@
       // Mobile menu toggle
       const menuToggle = document.getElementById("menuToggle");
       const navLinksList = document.querySelector(".nav-links");
-      const body = document.body;
-
       menuToggle.addEventListener("click", () => {
         navLinksList.classList.toggle("open");
-      });
-      menuToggle.addEventListener("click", (e) => {
-        e.stopPropagation();
       });
       // Close menu on link click (mobile)
       navLinks.forEach((link) => {
         link.addEventListener("click", () => {
           navLinksList.classList.remove("open");
         });
-      });
-      body.addEventListener("click", () => {
-        navLinksList.classList.remove("open");
       });
     </script>
   </body>

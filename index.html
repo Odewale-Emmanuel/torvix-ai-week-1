@@ -5,6 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emmanuel Odewale | Frontend Engineer</title>
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Emmanuel Odewale | Frontend Engineer" />
+    <meta
+      property="og:description"
+      content="Frontend Engineer passionate about React, Next.js, Tailwind, and building delightful digital experiences."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://odewale-mdee.vercel.app" />
+    <meta
+      property="og:image"
+      content="https://odewale-mdee.vercel.app/asset/mdee_dark.png"
+    />
+    <meta property="og:image:alt" content="Emmanuel Odewale" />
+    <meta property="og:site_name" content="Emmanuel Odewale Portfolio" />
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Emmanuel Odewale | Frontend Engineer" />
+    <meta
+      name="twitter:description"
+      content="Frontend Engineer passionate about React, Next.js, Tailwind, and building delightful digital experiences."
+    />
+    <meta
+      name="twitter:image"
+      content="https://odewale-mdee.vercel.app/asset/mdee_dark.png"
+    />
+    <meta name="twitter:image:alt" content="Emmanuel Odewale" />
+    <meta name="twitter:site" content="@odewale_mdee" />
+    <meta name="twitter:creator" content="@odewale_mdee" />
+
     <!-- Line Awesome CDN -->
     <link
       rel="stylesheet"
@@ -12,6 +43,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -296,12 +328,14 @@
           }
         });
       });
+
       // Mobile menu toggle
       const menuToggle = document.getElementById("menuToggle");
       const navLinksList = document.querySelector(".nav-links");
       menuToggle.addEventListener("click", () => {
         navLinksList.classList.toggle("open");
       });
+
       // Close menu on link click (mobile)
       navLinks.forEach((link) => {
         link.addEventListener("click", () => {

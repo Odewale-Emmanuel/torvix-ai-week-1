@@ -93,27 +93,13 @@ section > div {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100vw;
-    height: 100vh;
-    width: 70vw;
-    background: white;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    transition: right 0.3s ease;
-    z-index: 101;
-  }
-  .nav-links.open {
-    right: 0;
-  }
-  .menu-icon {
-    display: block;
-  }
+.menu-close {
+  display: none;
+  font-size: 2rem;
+  color: var(--primary);
+  cursor: pointer;
+  margin-left: 1.2rem;
+  z-index: 102;
 }
 
 /* ===== HERO ===== */
@@ -201,7 +187,7 @@ section.about p {
 /* ===== SKILLS ===== */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 1rem;
 }
 
@@ -345,4 +331,114 @@ div.skill-card:hover > .skill-label {
 .social-icons a:hover {
   color: #1d4ed8;
   transform: scale(1.1);
+}
+
+.desktop-nav {
+  display: block;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    height: 100vh;
+    width: 70vw;
+    background: white;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 101;
+  }
+  .nav-links.open {
+    right: 0;
+  }
+  .menu-icon {
+    display: block;
+    font-size: 2rem;
+    color: var(--primary);
+    cursor: pointer;
+    z-index: 102;
+  }
+  .menu-close {
+    display: none;
+    font-size: 2rem;
+    color: var(--primary);
+    cursor: pointer;
+    margin-left: 1.2rem;
+    z-index: 102;
+  }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 1rem;
+  }
+  .skill-card {
+    border-radius: var(--skill-card-radius);
+    padding: 1rem 0;
+  }
+  .skill-label {
+    display: none;
+  }
+  .skill-icon {
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 0.2rem;
+    width: 1em;
+    height: 1em;
+    aspect-ratio: auto;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70vw;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 101;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: right 0.3s ease;
+  }
+  .mobile-menu.open {
+    display: flex;
+  }
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .mobile-menu a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  .mobile-menu a.active,
+  .mobile-menu a:hover {
+    color: var(--primary);
+    font-weight: 600;
+  }
 }
